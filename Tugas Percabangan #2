@@ -1,0 +1,61 @@
+include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int belanja;
+    int batas_diskon = 1102019;
+    int total_harga;
+
+        cout <<  "Total Belanja Anda : " ;
+        cin >> belanja;
+        cout << "Input Data " << endl;
+        cout << "Input Data Anda 'MA' (untuk yang sudah menikah) atau 'KA' (untuk yang memiliki kartu anggota) :" << endl;
+        string data;
+        cin >> data;
+        cout << "Input Asal 'MKS' (untuk orang asli makassar) atau 'BMKS' (yang bukan orang asli makassar) : " ;
+        cin >> data;
+
+    if (data == "MA")
+    {
+        if (belanja >= batas_diskon)
+        {
+            cout <<"Diskon 75%" << endl;
+            total_harga = belanja - (belanja * 0.75);
+        }
+    }
+        else
+        {
+            cout <<"Diskon 50%" << endl;
+            total_harga = belanja - (belanja * 0.5);
+        }
+    if (data == "KA")
+    {
+        if (belanja >= batas_diskon)
+        {
+            cout <<"Diskon 25%" << endl;
+            total_harga = belanja - (belanja * 0.25);
+        }
+    }
+        else
+        {
+            cout << "Diskon 10%" << endl;
+            total_harga = belanja - (belanja * 0.10);
+        }
+     cout << "Total harga yang dibayar hanya : " << total_harga << endl;
+
+     if (data == "MKS")
+        {
+            cout <<"Total harga yang dibayar hanya : " << total_harga << endl;
+
+        }
+        else
+        {
+            cout << "Tambahan Diskon 10%" << endl;
+            total_harga = belanja - (belanja * 0.10 - belanja * 0.10) ;
+        }
+
+     cout << "Terimakasih telah berbelanja di toko kami:)" << endl;
+    return 0;
+}
